@@ -1,0 +1,47 @@
+package org.log;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+@WebServlet("/Login")
+public class Login extends HttpServlet {
+    private static final long serialVersionUID = 1L;
+
+    public Login() {
+        super();
+    }
+
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        response.sendRedirect("LoginPage.jsp");
+    }
+
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String userName = request.getParameter("userName");
+        String password = request.getParameter("password");
+        
+        System.out.println("Username: " + userName);
+        System.out.println("Password: " + password);
+        
+        String correctUsername = "Kansab Mohanraj";
+        String correctPassword = "Mkansab@1702";
+        
+        response.setContentType("text/html");
+        PrintWriter out = response.getWriter();
+
+        if (userName != null && password != null && userName.equals(correctUsername) && password.equals(correctPassword)) {
+            out.println("<h1>Login Successful</h1>");
+            out.println("<p>Welcome, " + userName + "!</p>");
+        } else {
+            out.println("<h1>Login Failed</h1>");
+            out.println("<p>Invalid username or password.</p>");
+            out.println("<a href='index.jsp'>Try Again</a>");
+        }
+    }
+}

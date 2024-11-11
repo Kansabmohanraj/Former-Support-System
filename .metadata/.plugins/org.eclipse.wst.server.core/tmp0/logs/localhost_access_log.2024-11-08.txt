@@ -1,0 +1,7 @@
+127.0.0.1 - - [08/Nov/2024:14:15:09 +0530] "GET / HTTP/1.1" 404 752
+0:0:0:0:0:0:0:1 - - [08/Nov/2024:14:15:10 +0530] "GET /FormerSupportSystem/LoginPage.jsp HTTP/1.1" 200 3065
+0:0:0:0:0:0:0:1 - - [08/Nov/2024:14:15:10 +0530] "GET /favicon.ico HTTP/1.1" 404 763
+0:0:0:0:0:0:0:1 - - [08/Nov/2024:14:15:18 +0530] "POST /FormerSupportSystem/Log HTTP/1.1" 200 4009
+0:0:0:0:0:0:0:1 - - [08/Nov/2024:14:15:26 +0530] "GET /FormerSupportSystem/LoginPage.jsp HTTP/1.1" 200 3065
+0:0:0:0:0:0:0:1 - - [08/Nov/2024:14:15:32 +0530] "POST /FormerSupportSystem/Log HTTP/1.1" 200 3322
+0:0:0:0:0:0:0:1 - - [08/Nov/2024:14:15:37 +0530] "GET /FormerSupportSystem/ForgotPage.jsp HTTP/1.1" 200 3133

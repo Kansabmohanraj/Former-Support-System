@@ -1,0 +1,37 @@
+package org.log;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import java.io.IOException;
+
+@WebServlet("/Login")
+public class Login extends HttpServlet {
+    private static final long serialVersionUID = 1L;
+
+    public Login() {
+        super();
+    }
+
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        // Handle GET request if needed (maybe display the login page)
+        response.getWriter().append("Login Page");
+    }
+
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        // Retrieve form parameters (username and password)
+        String username = request.getParameter("username");
+        String password = request.getParameter("password");
+
+        // Dummy check for demonstration purposes (replace with real authentication logic)
+        if ("admin".equals(username) && "password".equals(password)) {
+            // Redirect to a home/dashboard page on successful login
+            response.sendRedirect("HomePage.jsp");
+        } else {
+            // Redirect back to login page with error message on failed login
+            response.sendRedirect("LoginPage.jsp?error=Invalid credentials");
+        }
+    }
+}

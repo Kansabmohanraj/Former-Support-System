@@ -1,0 +1,7 @@
+INDEX VERSION 1.4+/Users/kansab/eclipse-J2EE-Class/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+3245791418.index
+3605375418.index
+1485098688.index
+921458178.index
+3423403570.index
+2854741719.index
